@@ -302,7 +302,7 @@ EOT;
 	}
 	public static function footer()
 	{
-		$output = self::getConfig('copyright').' &bull; '.'Powered by <a href="https://wondercms.com">WonderCMS</a>'.( ! self::$loggedIn ? ((self::getConfig('login') == 'loginURL') ? ' &bull; <a href="'.self::url('loginURL').'">Login</a>' : '') : ' &bull; <a href="'.self::url('logout').'">Logout</a>');
+		$output = self::getConfig('copyright').' &bull; '.'Powered by <a href="https://wondercms.com" target="_blank">WonderCMS</a>'.( ! self::$loggedIn ? ((self::getConfig('login') == 'loginURL') ? ' &bull; <a href="'.self::url('loginURL').'">Login</a>' : '') : ' &bull; <a href="'.self::url('logout').'">Logout</a>');
 		$output = self::hook('footer', $output);
 		if (@is_array($output)) $output = $output[0];
 		return $output;
